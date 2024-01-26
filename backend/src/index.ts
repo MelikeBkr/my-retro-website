@@ -16,7 +16,6 @@ mongoose.connect(process.env.MONGO_URI as string)
   .then(() => console.log('MongoDB connected...'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Route for handling form submissions
 app.post('/submit-form', async (req, res) => {
   const { name, email, message } = req.body;
 
